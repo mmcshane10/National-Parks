@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -51,9 +52,12 @@ namespace NationalParks.Controllers
 
         // RANDOM api/parks/random
         [HttpGet("random")]
-        public ActionResult<Park> Random(int id)
+        public ActionResult<Park> Random(int random)
         {
-            return _db.Parks.FirstOrDefault(entry => entry.ParkId == id);
+            Random rnd = new Random();
+            int length = _db.Parks.ToList().Count + 1;
+            random = rnd.Next(1, length);
+            return _db.Parks.FirstOrDefault(entry => entry.ParkId == random);
         }
 
         // POST api/parks
