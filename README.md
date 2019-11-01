@@ -6,7 +6,7 @@
 
 ## Description
 
-_A backend API application for National Parks. Database returns the name, description, location, size, and annual visitor information for each entry._
+_A backend API application for National Parks. Database returns the name, description, location, size, and annual visitor information for each entry. Versioning has been added to this API, as has NSwag._
 
 ## Endpoints
 
